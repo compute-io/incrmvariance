@@ -105,4 +105,15 @@ describe( 'compute-incrmvariance', function tests() {
 		assert.strictEqual( mvar(), 0 );
 	});
 
+	it( 'should always return 0 if provided a window size equal to 1', function test() {
+		var mvariance = incrmvariance( 1 );
+		mvariance( 4 );
+		assert.strictEqual( mvariance(), 0 );
+		assert.strictEqual( mvariance( 5 ), 0 );
+		assert.strictEqual( mvariance( 2 ), 0 );
+		for ( var i = 0; i < 100; i++ ) {
+			assert.strictEqual( mvariance( i ), 0 );
+		}
+	});
+
 });
