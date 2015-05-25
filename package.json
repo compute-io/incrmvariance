@@ -1,6 +1,6 @@
 {
   "name": "compute-incrmvariance",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a method to compute a moving sample variance incrementally.",
   "author": {
     "name": "Athan Reines",
